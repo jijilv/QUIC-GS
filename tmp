@@ -1,0 +1,298 @@
+
+python compress.py -s "/home/kemove/data/mipnerf360/bicycle/" -m "/home/kemove/data/3dgs-model/bicycle/" --output_path "/home/kemove/efficient-output/" --eval
+
+python compress.py -s "/home/kemove/data/mipnerf360/bonsai/" -m "/home/kemove/data/3dgs-model/bonsai/" --output_path "/home/kemove/efficient-output/" --eval
+
+python compress.py -s "/home/kemove/data/mipnerf360/counter/" -m "/home/kemove/data/3dgs-model/counter/" --output_path "/home/kemove/efficient-output/" --eval
+
+python compress.py -s "/home/kemove/data/mipnerf360/kitchen/" -m "/home/kemove/data/3dgs-model/kitchen/" --output_path "/home/kemove/efficient-output/" --eval
+
+python compress.py -s "/home/kemove/data/mipnerf360/room/" -m "/home/kemove/data/3dgs-model/room/" --output_path "/home/kemove/efficient-output/" --eval
+
+python compress.py -s "/home/kemove/data/mipnerf360/stump/" -m "/home/kemove/data/3dgs-model/stump/" --output_path "/home/kemove/efficient-output/" --eval
+
+python compress.py -s "/home/kemove/data/mipnerf360/garden/" -m "/home/kemove/data/3dgs-model/garden/" --output_path "/home/kemove/efficient-output/" --eval
+
+python compress.py -s "/home/kemove/data/mipnerf360/treehill/" -m "/home/kemove/data/3dgs-model/treehill/" --output_path "/home/kemove/efficient-output/" --eval
+
+python compress.py -s "/home/kemove/data/mipnerf360/flowers/" -m "/home/kemove/data/3dgs-model/flowers/" --output_path "/home/kemove/efficient-output/" --eval
+
+python compress.py -s "/home/kemove/data/tandt/truck/" -m "/home/kemove/data/3dgs-model/truck/" --output_path "/home/kemove/efficient-output/" --eval
+
+python compress.py -s "/home/kemove/data/tandt/train/" -m "/home/kemove/data/3dgs-model/train/" --output_path "/home/kemove/efficient-output/" --eval
+
+python compress.py -s "/home/kemove/data/db/playroom/" -m "/home/kemove/data/3dgs-model/playroom/" --output_path "/home/kemove/efficient-output/" --eval
+
+python compress.py -s "/home/kemove/data/db/drjohnson/" -m "/home/kemove/data/3dgs-model/drjohnson/" --output_path "/home/kemove/efficient-output/" --eval
+
+nohup bash scripts/run3.sh > run2.log 2>&1 &
+
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/bicycle/" \
+  -m "/home/kemove/data/3dgs-model/bicycle/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100 \
+  --use_importance_v4 True \
+  --topk_views_percent 0.1 \
+  --view_importance_weight 2.0
+
+python compress_ablate.py \
+  -s "/home/kemove/data/mipnerf360/bicycle/" \
+  -m "/home/kemove/data/3dgs-model/bicycle/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100 \
+  --use_importance_v4 True \
+  --topk_views_percent 0.1 \
+  --view_importance_weight 2.0 \
+  --ablation_setting "full" 
+
+python compress_ablate.py \
+  -s "/home/kemove/data/mipnerf360/bonsai/" \
+  -m "/home/kemove/data/3dgs-model/bonsai/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100 \
+  --use_importance_v4 True \
+  --topk_views_percent 0.1 \
+  --view_importance_weight 2.0 \
+  --ablation_setting "w/o Stage II" 
+
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/flowers/" \
+  -m "/home/kemove/data/3dgs-model/flowers/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100 \
+  --use_importance_v4 True \
+  --topk_views_percent 0.1 \
+  --view_importance_weight 2.0 \
+  --fixed_pruning_rate 0.0 --fixed_sh_rate 0.0
+
+  python compress.py \
+  -s "/home/kemove/data/mipnerf360/treehill/" \
+  -m "/home/kemove/data/3dgs-model/treehill/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100 \
+  --use_importance_v4 True \
+  --topk_views_percent 0.1 \
+  --view_importance_weight 2.0
+
+  python compress.py \
+  -s "/home/kemove/data/tandt/train/" \
+  -m "/home/kemove/data/3dgs-model/train/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec raw8  \
+  --quality_target_diff 0.65 --segments 100 \
+  --use_importance_v4 True \
+  --topk_views_percent 0.1 \
+  --view_importance_weight 2.0
+
+  python compress.py \
+  -s "/home/kemove/data/db/playroom/" \
+  -m "/home/kemove/data/3dgs-model/playroom/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 200 \
+  --use_importance_v4 True \
+  --topk_views_percent 0.1 \
+  --view_importance_weight 2.0
+
+
+python compress.py \
+  -s "/home/kemove/data/tandt/train/" \
+  -m "/home/kemove/data/3dgs-model/train/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 1000 \
+  --use_importance_v4 True \
+  --topk_views_percent 0.1 \
+  --view_importance_weight 2.0 \
+  --fixed_pruning_rate 0.0 --fixed_sh_rate 0.0
+
+python compress.py \
+  -s "/home/kemove/data/db/drjohnson/" \
+  -m "/home/kemove/data/3dgs-model/drjohnson/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100 \
+  --use_importance_v4 True \
+  --topk_views_percent 0.1 \
+  --view_importance_weight 2.0 \
+  --fixed_pruning_rate 0.5 --fixed_sh_rate 0.0
+
+
+python compress.py \
+  -s "/home/kemove/data/db/drjohnson/" \
+  -m "/home/kemove/data/3dgs-model/drjohnson/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100 \
+  --use_importance_v4 True \
+  --topk_views_percent 0.1 \
+  --view_importance_weight 2.0 \
+  --fixed_pruning_rate 0.5 --fixed_sh_rate 0.0
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/garden/" \
+  -m "/home/kemove/data/3dgs-model/garden/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100 \
+  --use_importance_v4 True \
+  --topk_views_percent 0.1  \
+  --view_importance_weight 1.8 \
+  --save_render True
+
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/bonsai/" \
+  -m "/home/kemove/data/3dgs-model/bonsai/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16 \
+  --quality_target_diff 0.65 --segments 100 \
+  --use_importance_v3 True \
+  --topk_views 10 \
+  --view_importance_weight 2.0
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/kitchen/" \
+  -m "/home/kemove/data/3dgs-model/kitchen/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16 \
+  --quality_target_diff 0.65 --segments 100
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/bicycle/" \
+  -m "/home/kemove/data/3dgs-model/bicycle/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method lzma --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/bonsai/" \
+  -m "/home/kemove/data/3dgs-model/bonsai/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16 \
+  --quality_target_diff 0.65 --segments 100
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/counter/" \
+  -m "/home/kemove/data/3dgs-model/counter/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16 \
+  --quality_target_diff 0.65 --segments 100
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/kitchen/" \
+  -m "/home/kemove/data/3dgs-model/kitchen/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/room/" \
+  -m "/home/kemove/data/3dgs-model/room/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/stump/" \
+  -m "/home/kemove/data/3dgs-model/stump/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/garden/" \
+  -m "/home/kemove/data/3dgs-model/garden/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/treehill/" \
+  -m "/home/kemove/data/3dgs-model/treehill/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16 --use_delta_encoding true \
+  --quality_target_diff 0.65 --segments 100
+
+python compress.py \
+  -s "/home/kemove/data/mipnerf360/flowers/" \
+  -m "/home/kemove/data/3dgs-model/flowers/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method lzma --compression_level 4 \
+  --xyz_codec morton16 --use_delta_encoding true \
+  --quality_target_diff 0.65
+
+python compress.py \
+  -s "/home/kemove/data/tandt/truck/" \
+  -m "/home/kemove/data/3dgs-model/truck/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 1000 \
+  --use_importance_v4 True \
+  --topk_views_percent 0.1 \
+  --view_importance_weight 2.0
+
+python compress.py \
+  -s "/home/kemove/data/db/playroom/" \
+  -m "/home/kemove/data/3dgs-model/playroom/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16  \
+  --quality_target_diff 0.65 --segments 100 \
+  --use_importance_v4 True \
+  --topk_views_percent 0.1 \
+  --view_importance_weight 2.0
+
+python compress.py \
+  -s "/home/kemove/data/tandt/train/" \
+  -m "/home/kemove/data/3dgs-model/train/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16 --use_delta_encoding true \
+  --quality_target_diff 0.65 --segments 100
+
+python compress.py \
+  -s "/home/kemove/data/db/playroom/" \
+  -m "/home/kemove/data/3dgs-model/playroom/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16 --use_delta_encoding true \
+  --quality_target_diff 0.65 --segments 100
+
+python compress.py \
+  -s "/home/kemove/data/db/drjohnson/" \
+  -m "/home/kemove/data/3dgs-model/drjohnson/" \
+  --output_path "/home/kemove/efficient-output/" \
+  --eval --compression_method zlib --compression_level 4 \
+  --xyz_codec morton16 --use_delta_encoding true \
+  --quality_target_diff 0.65 --segments 100

@@ -1,0 +1,189 @@
+Looking for config file in /home/kemove/data/3dgs-model/treehill/cfg_args
+Config file found: /home/kemove/data/3dgs-model/treehill/cfg_args
+[ARGS] Device: cuda
+[ARGS] Input Model Path: /home/kemove/data/3dgs-model/treehill
+[ARGS] Save Render: True
+Reading camera 1/141Reading camera 2/141Reading camera 3/141Reading camera 4/141Reading camera 5/141Reading camera 6/141Reading camera 7/141Reading camera 8/141Reading camera 9/141Reading camera 10/141Reading camera 11/141Reading camera 12/141Reading camera 13/141Reading camera 14/141Reading camera 15/141Reading camera 16/141Reading camera 17/141Reading camera 18/141Reading camera 19/141Reading camera 20/141Reading camera 21/141Reading camera 22/141Reading camera 23/141Reading camera 24/141Reading camera 25/141Reading camera 26/141Reading camera 27/141Reading camera 28/141Reading camera 29/141Reading camera 30/141Reading camera 31/141Reading camera 32/141Reading camera 33/141Reading camera 34/141Reading camera 35/141Reading camera 36/141Reading camera 37/141Reading camera 38/141Reading camera 39/141Reading camera 40/141Reading camera 41/141Reading camera 42/141Reading camera 43/141Reading camera 44/141Reading camera 45/141Reading camera 46/141Reading camera 47/141Reading camera 48/141Reading camera 49/141Reading camera 50/141Reading camera 51/141Reading camera 52/141Reading camera 53/141Reading camera 54/141Reading camera 55/141Reading camera 56/141Reading camera 57/141Reading camera 58/141Reading camera 59/141Reading camera 60/141Reading camera 61/141Reading camera 62/141Reading camera 63/141Reading camera 64/141Reading camera 65/141Reading camera 66/141Reading camera 67/141Reading camera 68/141Reading camera 69/141Reading camera 70/141Reading camera 71/141Reading camera 72/141Reading camera 73/141Reading camera 74/141Reading camera 75/141Reading camera 76/141Reading camera 77/141Reading camera 78/141Reading camera 79/141Reading camera 80/141Reading camera 81/141Reading camera 82/141Reading camera 83/141Reading camera 84/141Reading camera 85/141Reading camera 86/141Reading camera 87/141Reading camera 88/141Reading camera 89/141Reading camera 90/141Reading camera 91/141Reading camera 92/141Reading camera 93/141Reading camera 94/141Reading camera 95/141Reading camera 96/141Reading camera 97/141Reading camera 98/141Reading camera 99/141Reading camera 100/141Reading camera 101/141Reading camera 102/141Reading camera 103/141Reading camera 104/141Reading camera 105/141Reading camera 106/141Reading camera 107/141Reading camera 108/141Reading camera 109/141Reading camera 110/141Reading camera 111/141Reading camera 112/141Reading camera 113/141Reading camera 114/141Reading camera 115/141Reading camera 116/141Reading camera 117/141Reading camera 118/141Reading camera 119/141Reading camera 120/141Reading camera 121/141Reading camera 122/141Reading camera 123/141Reading camera 124/141Reading camera 125/141Reading camera 126/141Reading camera 127/141Reading camera 128/141Reading camera 129/141Reading camera 130/141Reading camera 131/141Reading camera 132/141Reading camera 133/141Reading camera 134/141Reading camera 135/141Reading camera 136/141Reading camera 137/141Reading camera 138/141Reading camera 139/141Reading camera 140/141Reading camera 141/141
+  Scene info loaded in 0.75 s
+Loading Training Cameras
+  Training cameras loaded in 2.31 s
+Loading Test Cameras
+  Test cameras loaded in 0.63 s
+Loading PLY file...
+  PLY file loaded in 5.02 s
+[INFO] Computing importance scores...
+[V4] Step 1: Evaluating view importance for all views...
+[V3] Evaluating view importance for all 123 views...
+
+[Overall] Importance contribution breakdown (averaged over 123 views):
+  image_variance contribution: 0.421927 (1.41%)
+  gradient_magnitude contribution: 0.739795 (2.48%)
+  visibility_score contribution: 28.724795 (96.11%)
+  Total importance: 29.886516
+[V4] Using all 123 views, with top-12 (10.0%) important views weighted 2.0x
+Computing importance (V4):   0%|          | 0/123 [00:00<?, ?it/s]Computing importance (V4):   3%|▎         | 4/123 [00:00<00:03, 35.93it/s]Computing importance (V4):   7%|▋         | 8/123 [00:00<00:03, 35.42it/s]Computing importance (V4):  10%|▉         | 12/123 [00:00<00:03, 34.97it/s]Computing importance (V4):  13%|█▎        | 16/123 [00:00<00:03, 34.49it/s]Computing importance (V4):  16%|█▋        | 20/123 [00:00<00:02, 34.71it/s]Computing importance (V4):  20%|█▉        | 24/123 [00:00<00:02, 34.27it/s]Computing importance (V4):  23%|██▎       | 28/123 [00:00<00:02, 33.72it/s]Computing importance (V4):  26%|██▌       | 32/123 [00:00<00:02, 34.38it/s]Computing importance (V4):  29%|██▉       | 36/123 [00:01<00:02, 34.65it/s]Computing importance (V4):  33%|███▎      | 40/123 [00:01<00:02, 34.00it/s]Computing importance (V4):  36%|███▌      | 44/123 [00:01<00:02, 34.21it/s]Computing importance (V4):  39%|███▉      | 48/123 [00:01<00:02, 34.16it/s]Computing importance (V4):  42%|████▏     | 52/123 [00:01<00:02, 33.63it/s]Computing importance (V4):  46%|████▌     | 56/123 [00:01<00:01, 34.50it/s]Computing importance (V4):  49%|████▉     | 60/123 [00:01<00:01, 34.56it/s]Computing importance (V4):  52%|█████▏    | 64/123 [00:01<00:01, 33.90it/s]Computing importance (V4):  55%|█████▌    | 68/123 [00:01<00:01, 33.92it/s]Computing importance (V4):  59%|█████▊    | 72/123 [00:02<00:01, 33.79it/s]Computing importance (V4):  62%|██████▏   | 76/123 [00:02<00:01, 33.36it/s]Computing importance (V4):  65%|██████▌   | 80/123 [00:02<00:01, 33.96it/s]Computing importance (V4):  68%|██████▊   | 84/123 [00:02<00:01, 34.11it/s]Computing importance (V4):  72%|███████▏  | 88/123 [00:02<00:01, 33.88it/s]Computing importance (V4):  75%|███████▍  | 92/123 [00:02<00:00, 34.02it/s]Computing importance (V4):  78%|███████▊  | 96/123 [00:02<00:00, 33.80it/s]Computing importance (V4):  81%|████████▏ | 100/123 [00:02<00:00, 33.58it/s]Computing importance (V4):  85%|████████▍ | 104/123 [00:03<00:00, 33.95it/s]Computing importance (V4):  88%|████████▊ | 108/123 [00:03<00:00, 34.12it/s]Computing importance (V4):  91%|█████████ | 112/123 [00:03<00:00, 33.64it/s]Computing importance (V4):  94%|█████████▍| 116/123 [00:03<00:00, 34.01it/s]Computing importance (V4):  98%|█████████▊| 120/123 [00:03<00:00, 34.07it/s]Computing importance (V4): 100%|██████████| 123/123 [00:03<00:00, 34.05it/s]
+
+[V4] Gradient Component Statistics (Mean Values):
+--------------------------------------------------
+Component          Raw Value   Relative %
+--------------------------------------------------
+xyz                 0.000005       83.13%
+scaling             0.000000        1.90%
+rotation            0.000000        5.65%
+dc                  0.000000        1.78%
+sh                  0.000000        6.90%
+opacity             0.000000        0.65%
+--------------------------------------------------
+
+[V4] Weighted Gradient Contributions:
+--------------------------------------------------
+Component         Weight    Contrib %
+--------------------------------------------------
+xyz                 0.02       26.32%
+scaling             1.00       30.11%
+rotation            0.20       17.89%
+dc                  0.10        2.82%
+sh                  0.20       21.84%
+opacity             0.10        1.02%
+--------------------------------------------------
+
+[Baseline] ...
+psnr:  22.288868480258518
+  Baseline render time:   0.17 s
+  Baseline PSNR:          22.2889 dB
+
+[Search] [Seed] pruning_rate=0.70, sh_rate=0.20, mem_score=1.460, ΔPSNR=0.4219 dB [OK]
+  Deep copy time:         0.0006 s
+  Prune time:             0.47 s
+psnr:  21.866931915283203
+  Render time: 0.10s
+  PSNR after pruning: 21.8669
+  ΔPSNR after pruning: 0.4219 dB
+  [INFO] New best config: mem_score=1.460, ΔPSNR=0.4219 dB
+
+[Search] [Neighbor] pruning_rate=0.71, sh_rate=0.20, mem_score=1.478, ΔPSNR=0.4729 dB [OK]
+  Deep copy time:         0.0004 s
+  Prune time:             0.44 s
+psnr:  21.815981970893013
+  Render time: 0.10s
+  PSNR after pruning: 21.8160
+  ΔPSNR after pruning: 0.4729 dB
+  [INFO] New best config: mem_score=1.478, ΔPSNR=0.4729 dB
+  [INFO] Queue cleanup: removed 1 low mem_score configs (queue: 3 -> 2)
+
+[Search] [Neighbor] pruning_rate=0.72, sh_rate=0.20, mem_score=1.496, ΔPSNR=0.5291 dB [OK]
+  Deep copy time:         0.0003 s
+  Prune time:             0.44 s
+psnr:  21.759766896565754
+  Render time: 0.09s
+  PSNR after pruning: 21.7598
+  ΔPSNR after pruning: 0.5291 dB
+  [INFO] New best config: mem_score=1.496, ΔPSNR=0.5291 dB
+  [INFO] Queue cleanup: removed 1 low mem_score configs (queue: 3 -> 2)
+
+[INFO] Early stop in neighbor search: best PSNR drop (0.5291 dB) >= 95% of target (0.5500 dB)
+
+[Search] Total configurations evaluated: 3
+
+[Finalize] Running quantization for pruning_rate=0.72, sh_rate=0.20
+  Deep copy time:         0.0003 s
+  Prune time:             0.44 s
+psnr:  21.759766896565754
+  Render time: 12.36s
+  PSNR after pruning: 21.7598
+  ΔPSNR after pruning: 0.5291 dB
+  Quantization breakdown -> prep_tensors: 0.000s, zero_mask_split: 0.001s, xyz_quant_morton: 0.005s, cpu_transfer: 0.074s, xyz_q16_encode: 0.255s, f_rest_int4: 0.955s, int8_pack: 0.916s
+  Quantization time:      2.21 s
+  Dequantization time:    1.00 s
+  Estimated size:         21.26 MB
+  Storage ratio vs input: 2.38%
+[INFO] Storage breakdown:
+    M_int8_compressed: 11.00 MB (51.74%)
+    M_rest_compressed: 5.21 MB (24.49%)
+    xyz_q16_compressed: 4.54 MB (21.35%)
+    Z_rest: 175.83 KB (0.81%)
+    S_rest: 175.83 KB (0.81%)
+    Z_int8: 85.99 KB (0.40%)
+    S_int8: 85.99 KB (0.40%)
+    npz_path: 212.00 B (0.00%)
+    int8_names: 131.00 B (0.00%)
+    xyz_codec_used: 120.00 B (0.00%)
+    compression_method: 120.00 B (0.00%)
+    xyz_codec: 115.00 B (0.00%)
+    xyz_q16_shape_uint16: 109.00 B (0.00%)
+    xyz_q16_shape_bytes: 108.00 B (0.00%)
+    xyz_q16_view_shape: 107.00 B (0.00%)
+    M_rest_shape: 101.00 B (0.00%)
+    M_int8_shape: 101.00 B (0.00%)
+    int4_names: 99.00 B (0.00%)
+    int2_names: 99.00 B (0.00%)
+    fp16_names: 99.00 B (0.00%)
+    segment_size_f_rest: 96.00 B (0.00%)
+    use_entropy_coding: 95.00 B (0.00%)
+    compression_level: 94.00 B (0.00%)
+    boundary_index: 91.00 B (0.00%)
+    num_segments: 89.00 B (0.00%)
+    bits_f_rest: 88.00 B (0.00%)
+    xyz_qbits: 86.00 B (0.00%)
+    sh_all_zero: 84.00 B (0.00%)
+    N_rest: 83.00 B (0.00%)
+    N: 78.00 B (0.00%)
+    xyz_mins: 69.00 B (0.00%)
+    xyz_maxs: 69.00 B (0.00%)
+psnr:  21.6836969587538
+  Final render time:      12.34 s
+  Final PSNR:             21.6837 dB
+  ΔPSNR from input:       0.6052 dB
+
+Search complete.
+
+============================================================
+Best combination found: pruning=0.720, sh=0.200
+
+[INFO] Best config:           pruning_rate = 0.720, sh_rate = 0.200
+[INFO] Base PSNR:             22.2889 dB
+[INFO] Best PSNR:             21.6837 dB
+[INFO] PSNR drop:             0.6052 dB
+[INFO] Input file size:       894.90 MB
+[INFO] Output file size:      21.26 MB
+[INFO] Compression ratio:     42.10x
+============================================================
+ Saving render results ...
+  Deep copy time:         0.0006 s
+  Prune time:             0.45 s
+psnr:  21.759766896565754
+  Render time: 12.28s
+  PSNR after pruning: 21.7598
+  ΔPSNR after pruning: 0.5291 dB
+
+============================================================
+[STATS] Pipeline Time Breakdown:
+  Load time:      8.72 s
+  Score time:     5.10 s
+  Search time:   30.18 s
+  Store time:    12.79 s
+  Total time:    56.79 s
+============================================================
+	Command being timed: "python /home/kemove/github/FlexGaussian/compress.py -s /home/kemove/data/mipnerf360/treehill -m /home/kemove/data/3dgs-model/treehill --output_path /home/kemove/efficient-output --quality_target_diff 0.55 --eval --compression_method zlib --compression_level 4 --xyz_codec morton16 --segments 1000 --use_importance_v4 True --topk_views_percent 0.1 --view_importance_weight 2.0 --save_render True"
+	User time (seconds): 229.60
+	System time (seconds): 12.55
+	Percent of CPU this job got: 411%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:58.91
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 4686512
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 141
+	Minor (reclaiming a frame) page faults: 1231745
+	Voluntary context switches: 47625
+	Involuntary context switches: 1483
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 417336
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
